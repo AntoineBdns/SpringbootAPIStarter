@@ -18,4 +18,7 @@ public class SampleService {
     public List<SampleModel> findAllSamples() {
         return sampleRepository.findAll();
     }
+
+    public SampleModel findSample(Long id) {
+        return sampleRepository.findById(id).orElseThrow();}
 }
